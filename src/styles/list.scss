@@ -1,0 +1,121 @@
+.list-header{
+  display:flex;
+  justify-content: space-between;
+    .left{
+      display:flex;
+      align-items: center;
+      h2{
+        margin-right:26px;
+      }
+    }
+    .right{
+      display:flex;
+      justify-content: flex-end;
+      align-items: center;
+      color: #fff;
+      .list-dropdown{
+        font-family:'Nunito Sans', sans-serif;
+        width: 185px;
+        margin-left:12px;
+        background: #393E44;
+        border: 1px solid rgba(255,186,0,0.40);
+        font-size: 15px;
+        color: #FFFFFF;
+        box-shadow:none;
+        &:focus{
+          box-shadow:none;
+        }
+        input{
+          //display: none;
+          color: transparent;
+          &:focus {
+            outline: none;
+          }
+        }
+        .react-dropdown-select-dropdown{
+          top: 40px;
+          border: 1px solid rgba(255,186,0,0.40);
+          background: #393E44;
+          .react-dropdown-select-item{
+            border-bottom: 0px;
+            background: #393E44;
+          }
+          .react-dropdown-select-item:hover { 
+            background: #2D3136;
+          }
+          .react-dropdown-select-item-selected{
+            background: #2D3136;
+
+          }
+
+        }
+      }
+
+    }
+  
+  .search-wrapper{
+    position: relative;
+    width: 154px;
+    img{
+      position: absolute;
+    }
+    .search-input{
+      height:20px;
+      width: 100%;
+      background: transparent;
+      border: none;
+      color:#fff;
+      border-bottom: 1px solid #999999;
+      padding-left: 20px;
+    }
+  }
+}
+.card-wrapper{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  .rule-card{
+    cursor: pointer;
+    width: 100%;
+    height: 352px;
+    background:#2D3136;
+    padding: 34px;
+    text-align: left;
+    margin:15px 0px;
+    box-sizing: border-box;
+    color:#fff;
+    box-shadow: -1px -1px 1px 0 rgba(0,0,0,0.07), 5px 5px 9px 0 rgba(0,0,0,0.15), inset 3px 3px 7px 0 rgba(34,37,41,0.20);
+    .card-header{
+      color:#fff;
+      font-size: 18px;
+      text-align: center;
+      position: relative;
+      .active-indicator{
+        background: rgba(0,0,0,.15);
+        font-size: 12px;
+        text-align: center;
+        padding:  2px 8px;
+        border-radius: 3px;
+        letter-spacing: 0;
+        position: absolute;
+        color: #FFBA00;
+        top:4px;
+        right:10px;
+      }
+    }
+    .rule-card-list{
+      margin-left:0px;
+      padding-left:0px;
+      li{
+        margin-left:0px;
+        padding-left:0px;
+        margin-bottom:6px;
+        display:flex;
+        justify-content: space-between;
+      }
+    }
+    .list-label img{
+      margin-right: 6px;
+    }
+  }
+}

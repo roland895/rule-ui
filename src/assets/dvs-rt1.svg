@@ -1,0 +1,23 @@
+
+<svg width="203px" height="59px" viewBox="0 0 203 59" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <path d="M3,0 L333,0 C334.656854,-3.04359188e-16 336,1.34314575 336,3 L336,59 L0,59 L0,3 C-2.02906125e-16,1.34314575 1.34314575,3.04359188e-16 3,0 Z" id="path-1"></path>
+    </defs>
+    <g id="Page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="main-page" transform="translate(-1037.000000, -457.000000)">
+            <g id="grp_DVS-RT1" transform="translate(904.000000, 457.000000)">
+                <g id="Rectangle">
+                    <g id="Mask" transform="translate(0.000000, 0.000000)">
+                        <g id="Oval-+-Oval-Copy-Mask">
+                            <mask id="mask-2" fill="white">
+                                <use xlink:href="#path-1"></use>
+                            </mask>
+                            <g id="Mask"></g>
+                        </g>
+                    </g>
+                    <rect fill-opacity="0.75" fill="#F2A723" style="mix-blend-mode: lighten;" transform="translate(336.000000, 97.000000) rotate(155.000000) translate(-336.000000, -97.000000) " x="67" y="-23" width="538" height="240"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

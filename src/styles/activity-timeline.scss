@@ -1,0 +1,83 @@
+.last-run-wrapper{
+  width:100%;
+  .activity-container-wrapper{
+    display:flex;
+    justify-content: space-between;
+    height:284px;
+    .activity-container{
+      width: 49%;
+      height: 284px;
+      font-size: 15px;
+      background: #2D3136;
+      letter-spacing: 0;
+      .activity-header{
+        background-image: linear-gradient(-180deg, #FFBA00 0%, #F3C195 100%);
+        background-image: linear-gradient(-180deg, #FFBA00 0%, #F1B47D 100%);
+        position: relative;
+        height: 59px;
+        width:100%;
+        text-align: center;
+        color: #212121;
+        overflow:hidden;
+        span{
+          z-index: 2;
+          position: absolute;
+          width: 100%;
+          left: 0px;
+          top: 21px;
+        }
+        &.isilon2 .mask{
+          position: absolute;
+          transform: rotate(20deg);
+          background: rgba(242,167,35,0.75);
+          width:320px;
+          height: 240px;
+          left: 60px;
+          top: -214px;
+        }
+      }
+      .activity{
+        height: 225px;
+        overflow-y: auto;
+        display:flex;
+        flex-direction: column;
+      }
+      .last-rule,.next-rule{
+        padding: 8px 10px; 
+        position: relative;
+        img{
+          position: absolute;
+          left: 19px;
+          top: 16px;
+        }
+        &>div{
+          padding:3px 0px;
+          cursor: pointer;
+          transition: all .1s linear;
+        }
+        &>div:hover{
+          background-color: #4C4F53;
+        }
+        text-align: left;
+        color:#fff;
+        .activity-label{
+          color:#FFBA00;
+          margin-left:35px;
+        }
+        .rule-name-and-date{
+          display:flex;
+          justify-content: space-between;
+          margin-left: 40px;
+          margin-top: 6px;
+          span{
+            width:50%;
+            text-align: left;
+          }
+          &:hover{
+          }
+        }
+
+      }
+    }
+  }
+}

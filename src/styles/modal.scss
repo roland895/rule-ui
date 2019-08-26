@@ -1,0 +1,702 @@
+.modal-content{
+  background: #393E44;
+  border: 1px solid #979797;
+  max-height:90%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index:11;
+  width: 1040px;
+  transition: all .3s linear;
+  overflow-y: auto;
+  .MuiPickersModal-dialogRoot{
+    border: 1px solid #FFBA00;
+    background-color: #393E44;
+  }
+  .MuiInput-underline:after {
+    border-bottom-color: #FFBA00;
+  }
+  .MuiInputBase-input {
+    color: #fff;
+  }
+  .MuiInput-underline:before {
+    border-bottom-color: #5D5333;
+  }
+  .MuiInput-underline:hover:not(.Mui-disabled):before {
+    border-bottom: 2px solid #5D5333;
+  }
+  .modal-header{
+    position:relative;
+    text-align: center;
+    color: #FFBA00;
+    font-size:20px;
+    height: 60px;
+    background: #2B2F33;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: capitalize;
+    position:sticky;
+    top:0px;
+    z-index: 5;
+    .modal-header-icon{
+      margin-right:10px;
+    }
+    img{
+      margin-right:8px;
+    }
+    .modal-close{
+      color:#fff;
+      position: absolute;
+      top: 12px;
+      right: 8px;
+      font-size: 24px;
+      cursor:pointer;
+    }
+  }
+  .modal-body.log{
+    padding: 47px 88px;
+    .execute-log-label{
+      margin-bottom: 10px;
+      text-align:left;
+      color: #fff;
+      img{
+        margin-right:10px;
+      }
+    }
+    .button-wrapper{
+      margin-top:41px;
+      display:flex;
+      justify-content: space-between;
+      .delete-button{
+        height:30px;
+        width:108px;
+        color: #FFBA00;
+        border: #FFBA00 2px solid;
+        border-radius: 1px;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #393E44;
+        box-shadow: 3px 3px rgba(0, 0, 0, 0.6);
+        cursor:pointer;
+        img{
+          margin-right:10px;
+        }
+        &:hover{
+          background-color: #424441;
+        }
+        &:focus{
+          background-color: #49483F;
+        }
+      }
+      .edit-button{
+        height:30px;
+        width:108px;
+        color:#212121;
+        background-color: #FFBA00;
+        border-radius: 1px;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 3px 3px rgba(0, 0, 0, 0.6);
+        cursor:pointer;
+
+        img{
+          margin-right:10px;
+        }
+        &:hover{
+          background-color: #FFB11B;
+        }
+        &:focus{
+          background-color: #FDA908;
+        }
+      }
+    }
+  }
+  .modal-body{
+    overflow-y:auto;
+    padding: 47px 199px;
+    padding-bottom:20px;
+    .field-section{
+      display:flex;
+      height:100%;
+      padding-bottom: 12px;
+    }
+    .field-n-line{
+      width:20px;
+      height:100;
+      position:relative;
+      margin-right:14px;
+      .field-n{
+        width:20px;
+        height:20px;
+        border-radius: 10px;
+        background: #979797;
+        color:#fff;
+      }
+      .line{
+        height: 100%;
+        width: 2px;
+        margin: 0 auto;
+        background: #666666;
+      }
+    }
+    .field-entry{
+      flex:1;
+      font-size: 15px;
+      text-align: left;
+      color: #6A6A6A;
+      margin-top:0px;
+      font-family:'Nunito Sans', sans-serif;
+
+      &.rule-info{
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+      .schedule-list{
+        color:#fff;
+        
+        li.scheduleWrapper{
+          margin:20px 0px !important;
+          padding-left: 8px;
+          position:relative;
+          .label{
+            margin-bottom: 10px;
+          }
+          .remove-schedule{
+            position: absolute;
+            cursor: pointer;
+            color: #FFBA00;
+            left:200px;
+            top:1px;
+            font-weight: bold;
+          }
+        }
+      }
+      .field-label{
+        margin-bottom: 8px;
+        color:#fff;
+        font-weight: bold;
+        font-size: 17px;
+      }
+      .label{
+        color:#fff;
+      }
+      .add-input{
+        width: 100%;
+        border-bottom: 0px solid #979797;
+        color: #6A6A6A;
+        margin-bottom: 33px;
+        margin-top:0px;
+        font-family:'Nunito Sans', sans-serif;
+        &.half{
+          width: calc(50% - 10px);
+        }        
+        .MuiInputBase-input{
+        }
+      }
+      .date-entry{
+        display:inline-block;
+        position: relative;
+        width: 121px;
+        margin: 0px 4px;
+        .calendar-icon{
+          position: absolute;
+          top: 5px;
+          left: 4px;
+        }
+        .MuiInputBase-input{
+          padding-left:22px;
+        }
+      }
+      .time-entry{
+        max-width: 106px;
+        display:inline-block;
+        margin: 0px 4px;
+        .period{
+          margin-top: -15px;
+
+        }
+      }
+      .period-entry{
+       display:flex;   
+       align-items: flex-end;
+      }
+      .MuiInputBase-root{
+        color: #6A6A6A;
+      }
+      .MuiInputLabel-animated{
+        font-size: 15px;
+        color: #888888;
+      }
+      .MuiFormLabel-root.Mui-focused {
+        color:#FFBA00;
+      }
+      .MuiInputBase-input{
+        color: #fff;
+      }
+      & .MuiInput-underline:before{
+        border-bottom-color: #5D5333;
+
+      }
+      & .MuiInput-underline:after{
+        border-bottom-color: #FFBA00;
+
+      }
+      .MuiInput-underline:hover:not(.Mui-disabled):before {
+        border-bottom-color: #5D5333;
+      }
+      .MuiPickersBasePicker-pickerView{
+        min-height: initial;
+      }
+      // textarea.add-input{
+      //   border-bottom: 0px solid #979797;
+
+      // }
+    }
+    .rule-details{
+      display:flex;
+      justify-content: space-between;
+      max-height: 424px;
+      width:100%;
+      .rule-details-list{
+        color:#fff;
+        font-size: 15px;
+        text-align: left;
+        width:calc(50% - 16px);
+        padding:0px;
+        margin-top:0px;
+        &.right{
+          .add-Schedule{
+            float:right;
+            color: #FFBA00
+          }
+        }
+        li{
+          .label{
+            color: #888888;
+            font-size: 12px;
+          }
+          margin-bottom: 12px;
+          img{
+            margin-right: 11px;
+            margin-bottom: -3px;
+          }
+          p{
+            width:100%;
+            display:inline-block;
+            margin:0px;
+            margin-top:10px;
+          }
+        }
+        .add-input{
+          width:100%;
+        }
+        .tuna-dropdown{
+          width:100%;
+
+        }
+        .schedule-wrapper{
+          margin-top:10px;
+          height: 100%;
+          max-height: 330px;
+          overflow-y:auto;
+          border: 1px solid #56595D;
+          box-shadow: inset 3px 3px 3px 0 rgba(40,40,40,0.10);
+          ul{
+            padding:0px;
+          }
+          .schedule-item{
+            background:#393E44;
+            padding:6px 6px 6px 20px;
+            position: relative;
+            .number{
+              position: absolute;
+              top: 16px;
+              left: 10px;
+            }
+            .schedule-label{
+              margin: 0px 12px;
+            }
+            .itemRow{
+              margin: 10px 0px;
+              .repeat-item{
+                margin-left: 9px;
+                .label{
+                  display: none;
+                }
+              }
+            }
+            .tuna-datePicker{
+              width: 90px;
+              margin-right: 10px;
+            }
+            &:nth-child(even){
+              background: #32373D;
+            }
+            .remove-schedule{
+              position: absolute;
+              cursor: pointer;
+              color: #FFBA00;
+              left:200px;
+              top:1px;
+              font-weight: bold;
+            }
+          }
+          .remove-icon{
+            margin-top:7px;
+          }
+          .time-entry{
+            margin-bottom:9px;
+            .period{
+              margin-top: -16px;
+
+            }
+          }
+          .end-Date{
+            align-items: flex-start;
+            margin-top: 7px;
+          
+          }
+        }
+      }
+    }
+    .end-Date, .period-input{
+      display:flex;
+      align-items:center;
+      .remove-icon{
+        margin: 0px 4px;
+        margin-bottom: 4px;
+      }
+      .label{
+        margin-right:8px;
+      }
+      .MuiTextField-root.period-input{
+        width:40px;
+      } 
+      .add-new-time-wrapper{
+        margin-top:6px;
+        .label{
+          margin: 6px 0px;
+          color:#fff;
+        }
+        .input-row{
+          display:flex;
+          .timeInputs{
+            margin-right:12px;
+          
+          }
+        }
+      }&.schedule-repeats{
+        align-items: flex-start;
+      }
+    }
+    .end-Date{
+      margin-bottom: 6px;
+      align-items: flex-end;
+      &.center{
+        align-items: center !important;
+
+      }
+      .type-selector{
+        margin-right:8px;
+      }
+    }
+    .schedule-input{
+      margin-left:108px;
+    }
+  }
+}
+  .repeat-item{
+    display:flex;
+    align-items: flex-end;
+    .addTimeButton{
+      color:#FFBA00;
+    }
+  }
+  .addTimeButton{
+    color:#FFBA00;
+  }
+
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,.5);
+  z-index:11;
+  transition: opacity .3s linear; 
+}
+.overlay-off{
+  opacity:0;
+  pointer-events: none;
+  .modal-content{
+    transform: translate(-50%, -0%);
+
+  }
+}
+.overlay-on{
+  display:block;
+  opacity:1;
+  .modal-content{
+    transform: translate(-50%, -50%);
+
+  }
+}
+.checkbox{
+  .MuiSvgIcon-root{
+    fill:#fff;
+  }
+  &.Mui-checked .MuiSvgIcon-root{
+    fill:#FFBA00;
+
+  }
+}
+.MuiPickersCalendar-transitionContainer {
+  /* margin-top: 12px; */
+  min-height: 120px !important;
+}
+.MuiPickersBasePicker-pickerView {
+  min-height: 260px !important;
+}
+.MuiPickersCalendarHeader-switchHeader {
+  border-top: 1px solid #fff;
+  margin:0px;
+  border-bottom: 1px solid #fff;
+}
+.MuiListItem-button{
+  color:#fff;
+}
+.tuna-datepicker .MuiPickersToolbar-toolbar{
+  display:none;
+}
+.MuiPopover-paper{
+  border: 1px solid #FFBA00;
+  outline: none;
+  position: absolute;
+  max-width: calc(100% - 32px);
+  min-width: 16px;
+  max-height: calc(100% - 32px);
+  min-height: 16px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: #393E44;
+}
+
+.tuna-timePicker{
+  width:72px;
+}
+.tuna-radio{
+  margin-bottom: 12px;
+  .MuiTypography-root {
+    font-family: 'Nunito Sans', sans-serif;
+    color: #fff;
+  } 
+  .MuiRadio-colorSecondary.Mui-checked{
+    color:#FFBA00;
+    padding: 2px 9px;
+  }
+  .MuiFormControlLabel-label.Mui-disabled, .MuiRadio-colorSecondary.Mui-disabled{
+    color: #666666;
+  }
+  .MuiFormControlLabel-label.Mui-disabled{
+    padding: 2px 9px;
+  }
+
+  
+}
+.day-picker{
+  display:flex;
+  .day{
+    width: 27px;
+    height: 27px;
+    color:#fff;
+    border: 1px solid rgba($color: #FFBA00, $alpha: .4);
+    &.selected{ 
+      background: #FDA908
+    }
+  }
+}
+.rule-execute-log{
+  width: 100%;
+  .log-table{
+    width:100%;
+    color:#fff;
+    font-size: 15px;
+    text-align: left;
+    border-spacing: 0px;
+    font-weight: initial;
+    border-radius:1px;
+    box-shadow: 2px 2px 3px 0 rgba(0,0,0,0.40);
+    tr th{
+      padding-top:6px;
+      padding-left:11px;
+      height: 33px;
+    }
+    tr th:nth-child(1){
+      width:200px;
+    }
+    tr th:nth-child(2){
+    }
+    tr:nth-child(even) {
+      background-color: #222529;
+    }
+    tr:nth-child(odd) {
+      background-color: #2D3136;
+    }
+  }
+}
+.addRuleButtonWrapper{
+  display:flex;
+  justify-content: center;
+  padding-bottom: 26px;
+}
+.deleteModal{
+  position: absolute;
+  padding: 30px;
+  width: 400px;
+  background-color: rgba(35,37,38,.9);
+  border: 2px solid #000;
+  color:#fff;
+  outline: 'none';
+  text-align: center;
+  img{
+    margin:0px auto;
+  }
+  &:focus {
+    outline: none
+  }
+  .button-wrapper{
+    margin-top:41px;
+    display:flex;
+    justify-content: space-between;
+    .delete-button{
+      height:30px;
+      width:108px;
+      color: #fff;
+      border: #fff 1px solid;
+      border-radius: 1px;
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #393E44;
+      box-shadow: 3px 3px rgba(0, 0, 0, 0.6);
+      cursor:pointer;
+      img{
+        margin-right:10px;
+      }
+      &:hover{
+        background-color: #424441;
+      }
+      &:focus{
+        background-color: #49483F;
+      }
+    }
+    .edit-button{
+      height:30px;
+      width:108px;
+      color: #fff;
+      border: #fff 1px solid;
+      border-radius: 1px;
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #393E44;
+
+      box-shadow: 3px 3px rgba(0, 0, 0, 0.6);
+      cursor:pointer;
+
+      img{
+        margin-right:10px;
+      }
+      &:hover{
+        background-color: #424441;
+      }
+      &:focus{
+        background-color: #49483F;
+      }
+    }
+  }
+}
+.message{
+  text-align: center;
+  color: #FF4545;
+  margin-bottom:20px;
+}
+
+.ui-success,.ui-error {
+	width: 56px; height: 56px;
+  margin: 40px auto;
+  padding:10px;
+  justify-content: center;
+	// border:1px solid #eee;
+}
+
+// Colors
+$green: #FFBA00;
+$white: #fff;
+
+// Misc
+$curve: cubic-bezier(0.650, 0.000, 0.450, 1.000);
+
+
+.checkmark {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: block;
+  stroke-width: 2;
+  stroke: $white;
+  stroke-miterlimit: 10;
+  box-shadow: inset 0px 0px 0px $green;
+  animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+}
+
+.checkmark__circle {
+  stroke-dasharray: 166;
+  stroke-dashoffset: 166;
+  stroke-width: 2;
+  stroke-miterlimit: 10;
+  stroke: $green;
+  fill: none;
+  animation: stroke .6s $curve forwards;
+}
+
+.checkmark__check {
+  transform-origin: 50% 50%;
+  stroke-dasharray: 48;
+  stroke-dashoffset: 48;
+  animation: stroke .3s $curve .8s forwards;
+}
+.tuna-timeText.day, .tuna-timeText.month {
+  width: 50px;
+}
+.tuna-select .MuiPaper-rounded{
+  background-color: #393E44;
+  border: 1px solid #FFBA00;
+  color: #fff;
+}
+@keyframes stroke {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes scale {
+  0%, 100% {
+    transform: none;
+  }
+  50% {
+    transform: scale3d(1.1, 1.1, 1);
+  }
+}
+
+@keyframes fill {
+  100% {
+    box-shadow: inset 0px 0px 0px 30px $green;
+  }
+}

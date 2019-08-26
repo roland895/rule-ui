@@ -1,0 +1,27 @@
+
+<svg width="336px" height="59px" viewBox="0 0 336 59" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#FFBA00" offset="0%"></stop>
+            <stop stop-color="#F3C195" offset="100%"></stop>
+        </linearGradient>
+        <path d="M3,0 L333,0 C334.656854,-3.04359188e-16 336,1.34314575 336,3 L336,59 L0,59 L0,3 C-2.02906125e-16,1.34314575 1.34314575,3.04359188e-16 3,0 Z" id="path-2"></path>
+        <linearGradient x1="51.8043155%" y1="0%" x2="51.8043155%" y2="114.360434%" id="linearGradient-4">
+            <stop stop-color="#FFBA00" offset="0%"></stop>
+            <stop stop-color="#F1B47D" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="main-page" transform="translate(-200.000000, -457.000000)">
+            <g id="grp_ISILON2" transform="translate(200.000000, 457.000000)">
+                <g id="Rectangle">
+                    <mask id="mask-3" fill="white">
+                        <use xlink:href="#path-2"></use>
+                    </mask>
+                    <use id="Mask" fill="url(#linearGradient-1)" xlink:href="#path-2"></use>
+                    <path d="M3,0 L333,0 C334.656854,-3.04359188e-16 336,1.34314575 336,3 L336,59 L0,59 L0,3 C-2.02906125e-16,1.34314575 1.34314575,3.04359188e-16 3,0 Z" id="Rectangle-Copy" fill="url(#linearGradient-4)" mask="url(#mask-3)"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
