@@ -15,7 +15,7 @@
     "react-lazy-load": "^3.0.13",
     "react-modal": "^3.8.1",
     "react-onclickoutside": "^6.8.0",
-    "react-scripts": "3.0.1",
+    "react-scripts": "3.4.4",
     "react-scroll-horizontal": "^1.6.2"
   },
   "scripts": {
